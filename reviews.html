@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Review Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100 min-h-screen flex items-center justify-center p-4">
+
+   
+
+  <div class="relative max-w-xs w-full">
+     <h1 class="text-center font-semibold text-2xl italic">our customer feedback </h1>
+
+    <!-- Carousel Container -->
+    <div id="carousel" class="overflow-hidden relative">
+      <!-- Slides -->
+      <div class="carousel-slide p-4 bg-gray-100 rounded shadow-md border border-green-400 hidden">
+        <img src="morenikeji2.jpg" alt="customer-image" class="rounded-full w-full h-48 object-cover">
+        <span class="font-bold block text-center mt-2">Morenikeji T. – Lagos, Nigeria</span>
+        <p class="font-semibold italic text-center mt-2">I ordered their amala, ewedu and gbegiri</p>
+        <p class="text-sm text-center mt-2">The amala and ewedu I had here brought back childhood memories. Rich, flavorful, and served piping hot — just the way it's meant to be. It’s refreshing to find a place that respects traditional recipes.</p>
+      </div>
+
+      <div class="carousel-slide p-4 bg-gray-100 rounded shadow-md border border-green-400 hidden">
+        <img src="faviee.jpg" alt="customer-image" class="rounded-full w-full h-48 object-cover">
+        <span class="font-bold block text-center mt-2">Faviee Ashleyton – Abuja, Nigeria</span>
+        <p class="font-semibold italic text-center mt-2">I ordered their white soup</p>
+        <p class="text-sm text-center mt-2">Ofe Nsala on point! Highly recommend.</p>
+      </div>
+
+      <div class="carousel-slide p-4 bg-gray-100 rounded shadow-md border border-green-400 hidden">
+        <img src="maryam1.jpg" alt="customer-image" class="rounded-full w-full h-48 object-cover">
+        <span class="font-bold block text-center mt-2">Maryam K. – Ilorin, Nigeria</span>
+        <p class="font-semibold italic text-center mt-2">I ordered their yam, plantain and fried egg</p>
+        <p class="text-sm text-center mt-2">Boiled yam, egg, and fried plantain. Absolutely delicious! The spices were on point, and the portion was generous. Felt like a proper home-cooked meal.</p>
+      </div>
+
+      <div class="carousel-slide p-4 bg-gray-100 rounded shadow-md border border-green-400 hidden">
+        <img src="dannywalter4.jpg" alt="customer-image" class="rounded-full w-full h-48 object-cover">
+        <span class="font-bold block text-center mt-2">Danny Walter – Lagos, Nigeria</span>
+        <p class="font-semibold italic text-center mt-2">I ordered their Moi Moi</p>
+        <p class="text-sm text-center mt-2">The moi moi was perfectly steamed — soft, moist, and packed with flavor. I loved the bits of fish and egg inside. It wasn’t oily at all, just rich and satisfying. Honestly, one of the best I’ve had in a long time.</p>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex justify-between mt-4">
+      <button id="prevBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+        &#10094; Prev
+      </button>
+      <button id="nextBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+        Next &#10095;
+      </button>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const slides = document.querySelectorAll(".carousel-slide");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.add("hidden");
+        if (i === index) {
+          slide.classList.remove("hidden");
+        }
+      });
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    prevBtn.addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    });
+
+    // Show the first slide initially
+    showSlide(currentSlide);
+  </script>
+
+</body>
+</html>

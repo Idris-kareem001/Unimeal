@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unimeal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body class="bg-green-200">
+<nav class="flex items-center justify-between px-6 py-4 bg-white shadow-md  drop-shadow-[0_4px_3px_rgba(34,197,94,0.5)]
+">
+
+    <div class="flex items-center space-x-4">
+      <img src="unimeal logo.jpg" alt="Logo" class="h-16 w-16 object-cover rounded-1xl">
+      <span class="text-xl font-semibold"></span>
+    </div>
+
+    
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    
+    <div id="menu" class="hidden md:flex space-x-6 text-lg">
+      <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/index.html" class="hover:text-green-600 hover:font-bold hover:underline uppercase italic">Home</a>
+      <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/categories.html"  class="hover:text-green-600 hover:font-bold hover:underline uppercase italic">Categories</a>
+       <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/reviews.html" class="hover:text-green-600 hover:font-bold hover:underline uppercase italic">Reviews</a>
+      <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/about.html" class="hover:text-green-600 hover:font-bold hover:underline uppercase italic">About</a>
+      <a href="\contact.html" class="hover:text-green-600 hover:font-bold hover:underline uppercase italic">Contact</a>
+    </div>
+  </nav>
+
+  
+  <div id="mobile-menu" class="md:hidden hidden px-6 py-4 space-y-2 bg-white shadow-md">
+    <a href="Home" class="block hover:text-blue-600">Home</a>
+    <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/categories.html" class="block hover:text-blue-600">Categories</a>
+    <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/reviews.html" class="hover:text-green-600 hover:font-bold hover:underline uppercase italic">Reviews</a>
+    <a href="file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/about.html" class="block hover:text-blue-600">About</a>
+    <a href="\file:///C:/Users/Bigbag/Desktop/my%20html%20page/classwork/projects/unimeal/contact/contact.html" class="block hover:text-blue-600">Contact</a>
+  </div>
+
+<section class="flex flex-col-reverse md:flex-row items-center justify-between px-16 py-12">
+    <div class="text-left max-w-md">
+        <h2 class="font-bold text-3xl italic">🍽️ Unimeal – A World of Taste on One Plate</h2>
+        <p class="text-sm px-4 py-4">From sweet to spicy, our local and international dishes are bursting with bold, unforgettable flavors..</p>
+    </div>
+            <img src="egusi1.jpg" alt="image" class="max-w-xs md:max-w-md rounded-full drop-shadow-[0_4px_3px_rgba(234,179,8,0.5)]
+">
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    // Toggle mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+
+    AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true      // animate only once
+  });
+  </script>
+    
+</body>
+</html>
