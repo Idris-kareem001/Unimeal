@@ -6,16 +6,16 @@
   <title>Customer Review Carousel</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-green-100 min-h-screen flex flex-col items-center justify-center p-4">
 
-   
+  <!-- Title -->
+  <h1 class="text-center font-semibold text-2xl italic mb-6">Our Customer Feedback</h1>
 
-  <div class="relative max-w-xs w-full">
-     <h1 class="text-center font-semibold text-2xl italic">our customer feedback </h1>
+  <!-- Carousel Container -->
+  <div class="relative max-w-md w-full">
 
-    <!-- Carousel Container -->
-    <div id="carousel" class="overflow-hidden relative">
-      <!-- Slides -->
+    <!-- Slides -->
+    <div id="carousel">
       <div class="carousel-slide p-4 bg-gray-100 rounded shadow-md border border-green-400 hidden">
         <img src="morenikeji2.jpg" alt="customer-image" class="rounded-full w-full h-48 object-cover">
         <span class="font-bold block text-center mt-2">Morenikeji T. – Lagos, Nigeria</span>
@@ -54,8 +54,45 @@
         Next &#10095;
       </button>
     </div>
-
   </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white mt-16 w-full">
+    <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- About -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Unimeal</h4>
+        <p class="text-gray-100">
+          Experience a world of taste on one plate. Delicious local and international dishes delivered with love.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-green-200 hover:underline">Home</a></li>
+          <li><a href="categories.html" class="hover:text-green-200 hover:underline">Categories</a></li>
+          <li><a href="reviews.html" class="hover:text-green-200 hover:underline">Reviews</a></li>
+          <li><a href="about.html" class="hover:text-green-200 hover:underline">About</a></li>
+          <li><a href="contact/contact.html" class="hover:text-green-200 hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social / Contact -->
+      <div>
+        <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+        <div class="flex space-x-4 mb-4">
+          <a href="#" class="hover:text-green-200"><img src="facebook-icon.svg" alt="Facebook" class="w-6 h-6"></a>
+          <a href="#" class="hover:text-green-200"><img src="twitter-icon.svg" alt="Twitter" class="w-6 h-6"></a>
+          <a href="#" class="hover:text-green-200"><img src="instagram-icon.svg" alt="Instagram" class="w-6 h-6"></a>
+        </div>
+        <p class="text-gray-100 text-sm">© 2025 Unimeal. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
 
   <!-- JavaScript -->
   <script>
@@ -67,9 +104,7 @@
     function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.classList.add("hidden");
-        if (i === index) {
-          slide.classList.remove("hidden");
-        }
+        if (i === index) slide.classList.remove("hidden");
       });
     }
 
@@ -83,7 +118,7 @@
       showSlide(currentSlide);
     });
 
-    // Show the first slide initially
+    // Show first slide initially
     showSlide(currentSlide);
   </script>
 
